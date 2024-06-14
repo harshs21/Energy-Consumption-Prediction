@@ -1,6 +1,5 @@
 ### Energy Consumption Prediction
 
-### Software And Tools Requirements
 
 
 Create a new environment
