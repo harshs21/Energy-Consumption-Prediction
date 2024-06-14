@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="login">
+    <h1>Energy Consumption Prediction</h1>
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
+      <input type="text" name="t3" placeholder="t3" /><br>
+      <input type="text" name="rh_5" placeholder="rh_5" /><br>
+      <input type="text" name="t8" placeholder="t8" /><br>
+      <input type="text" name="rh_6" placeholder="rh_6" /><br>
+      <input type="text" name="t2" placeholder="t2" /><br>
+      <input type="text" name="press_mm_hg" placeholder="press_mm_hg" /><br>
+      <input type="text" name="rh_1" placeholder="rh_1" /><br>
+      <input type="text" name="rh_8" placeholder="rh_8" /><br>
+      <input type="text" name="rh_out" placeholder="rh_out" /><br>
+      <input type="text" name="lights" placeholder="lights" /><br>
+      <input type="file" name="file" accept=".csv" /><br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <br>
+  </div>
+  {{prediction_text}}
+
+</body>
+
+</html>
